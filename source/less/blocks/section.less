@@ -1,0 +1,55 @@
+.section {
+  padding: 35px 0;
+}
+
+@media (min-width: @tablet) {
+  .section {
+    padding: 50px 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .section {
+    position: relative;
+    &--pattern-center::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 30%;
+      display: block;
+      width: 40%;
+      height: 95%;
+      background-color: @primary-light;
+      opacity: 0.75;
+    }
+    &--pattern-side::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -40%;
+      display: block;
+      width: 70%;
+      height: 100%;
+      background-color: @primary-light;
+      opacity: 0.75;
+    }
+    &--pattern-side::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -40%;
+      display: block;
+      width: 70%;
+      height: 100%;
+      background-color: @primary-light;
+      opacity: 0.75;
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .section {
+    padding: 120px 30px 0;
+  }
+}

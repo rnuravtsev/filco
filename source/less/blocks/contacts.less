@@ -1,0 +1,45 @@
+.contacts__list {
+  .reset-list();
+  color: @secondary;
+}
+
+.contacts__item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: @secondary;
+  &--pin {
+    width: 30px;
+  }
+}
+
+.contacts__subtitle {
+  font-size: 17px;
+  color: @white;
+}
+
+.contacts__link {
+  .link();
+  &:hover {
+    .link-hover();
+  }
+}
+
+@media (min-width: @mobile-plus) {
+  .contacts__icon {
+    &--pin {
+      width: 50px;
+    }
+  }
+}
+
+@media (min-width: @laptop) {
+  .contacts__icon {
+    &--pin {
+      width: auto;
+    }
+  }
+}

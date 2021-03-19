@@ -1,0 +1,35 @@
+.main-nav {
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 700;
+  color: @primary;
+}
+
+.main-nav__item {
+  border-bottom: @border-secondary;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.main-nav__link {
+  color: @primary;
+  &:hover {
+    color: @secondary
+  }
+}
+
+@media (min-width: @tablet) {
+  .main-nav__item {
+    border: 0;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: @laptop) {
+  .main-nav {
+    &__item {
+      margin: 0 5px;
+    }
+  }
+}

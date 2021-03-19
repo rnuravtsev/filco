@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+  <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <link href="css/style-min.css" rel="stylesheet">
+  <title>Filco</title>
+</head>
+
+<body>
+<div style="display: none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
+<div class="container-fluid p-0 m-0">
+  <header
+    class="page-header page-header__nav main-nav navbar navbar-expand-md align-items-center justify-content-between">
+    <img class="page-header__logo" src="img/logo-filco.svg" alt="Логотип компании Filko">
+    <div class="d-none d-lg-flex align-items-center">
+      <svg class="page-header__icon page-header__icon--phone" width="20" height="20">
+        <use xlink:href="#icon-phone-sprite"></use>
+      </svg>
+      <a class="page-header__link" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>
+    </div>
+    <button class="page-header__burger burger navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon">
+            <svg class="burger__icon-menu" width="20" height="23">
+              <use xlink:href="#icon-menu-sprite"></use>
+            </svg>
+          </span>
+    </button>
+    <nav class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="main-nav__list navbar-nav ml-auto justify-content-around">
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#about" >О компании</a>
+        </li>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#services">Услуги</a>
+        </li>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#consumers">Наши клиенты</a>
+        </li>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#docs">Документы</a>
+        </li>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#autopark">Автопарк</a>
+        </li>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <section class="intro section" id="intro">
+        <div class="intro__wrapper">
+          <h2 class="intro__title">Транспортная компания ООО "Филко"</h2>
+          <h3 class="intro__subtitle">Надёжно. Качественно. В срок.</h3>
+        </div>
+        <a class="intro__link" href="#about">
+          <svg class="intro__icon" width="30" height="30">
+            <use xlink:href="#icon-down-arrow-sprite"></use>
+          </svg>
+        </a>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <section class="about section section--pattern-center row" id="about">
+    <div class="col-12 col-lg-5">
+      <h2 class="about__title title title--section">О компании</h2>
+      <p class="about__text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque velit doloremque incidunt
+        soluta, doloribus architecto omnis odit deserunt consectetur dolores veritatis repellendus eius numquam porro
+        facere ipsum possimus. Sint ipsa sunt nihil, dolores soluta consequatur quo eveniet cum, commodi laborum
+        suscipit rerum consequuntur repellendus amet deserunt. Suscipit voluptates vel assumenda libero dicta fuga
+        reiciendis aliquid cum velit nesciunt rem animi eius eveniet quis deserunt aperiam eligendi sequi laudantium,
+        ad quas quia odio provident quod. Sequi sit quis cumque?
+      </p>
+    </div>
+    <div class="col-12 col-lg-7">
+      <ul class="about__list row no-gutters">
+        <li class="about__item col-6 col-md-4 order-1 order-md-1">
+          <div class="about__decor decor">
+            <strong class="decor__number">6</strong>
+            <p class="decor__text">офисов</p>
+            <p class="decor__text decor__text--small mb-0">По России</p>
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-4 order-md-2">
+          <div class="about__decor decor">
+            <strong class="decor__number">61</strong>
+            <p class="decor__text">грузовик</p>
+            <p class="decor__text decor__text--small mb-0">JAC, Газон</p>
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-2 order-md-3">
+          <div class="about__decor decor decor--image">
+            <img src="../img/about-decor.png" alt="">
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-3 order-md-4">
+          <div class="about__decor decor decor--image">
+            <img src="../img/about-decor.png" alt="">
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-5">
+          <div class="about__decor decor">
+            <strong class="decor__number">150</strong>
+            <p class="decor__text">сотрудников</p>
+            <p class="decor__text decor__text--small mb-0">профессионалов</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <section class="services section section--pattern-none" id="services">
+  <h2 class="services__title title title--section">Услуги</h2>
+  <ul class="services__list row no-gutters">
+    <li class="services__item col-12 col-sm-6 col-lg-4">
+      <div class="services__decor">
+        <svg class="services__icon">
+          <use xlink:href="#icon-truck-sprite"></use>
+        </svg>
+      </div>
+      <h3 class="services__subtitle">Доставка грузов</h3>
+    </li>
+    <li class="services__item col-12 col-sm-6 col-lg-4">
+      <div class="services__decor">
+        <svg class="services__icon">
+          <use xlink:href="#icon-truck-ref-sprite"></use>
+        </svg>
+      </div>
+      <h3 class="services__subtitle">Доставка грузов<br> рефрижераторами</h3>
+    </li>
+    <li class="services__item col-12 col-sm-6 col-lg-4">
+      <div class="services__decor">
+        <svg class="services__icon">
+          <use xlink:href="#icon-truck-group-sprite"></use>
+        </svg>
+      </div>
+      <h3 class="services__subtitle">Доставка сборных грузов</h3>
+    </li>
+    <li class="services__item col-12 col-sm-6 col-lg-4">
+      <div class="services__decor">
+        <svg class="services__icon">
+          <use xlink:href="#icon-insurance-sprite"></use>
+        </svg>
+      </div>
+      <h3 class="services__subtitle">Страхование грузов</h3>
+    </li>
+    <li class="services__item col-12 col-sm-6 col-lg-4">
+      <div class="services__decor">
+        <svg class="services__icon">
+          <use xlink:href="#icon-customs-sprite"></use>
+        </svg>
+      </div>
+      <h3 class="services__subtitle">Таможенное оформление</h3>
+    </li>
+    <li class="services__item col-12 col-sm-6 col-lg-4">
+      <div class="services__decor">
+        <svg class="services__icon">
+          <use xlink:href="#icon-storage-sprite"></use>
+        </svg>
+      </div>
+      <h3 class="services__subtitle">Хранение грузов</h3>
+    </li>
+  </ul>
+      </section>
+</div>
+<div class="container">
+  <section class="consumers section section--pattern-none" id="consumers">
+    <h2 class="consumers__title title title--section">Наши клиенты</h2>
+    <ul class="consumers__slider">
+      <li class="">
+        <img class="consumers__image" src="../img/logo-magnit.png" alt="Магнит">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-lenta.png" alt="Лента">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-soglasie.png" alt="Согласие">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-sber.png" alt="Сбер">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-vkusvill.png" alt="Вкусвилл">
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="container">
+  <section class="docs section section--pattern-none" id="docs">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="docs__title title title--section">Документы</h2>
+      </div>
+    </div>
+    <ul class="docs__list row">
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque</a>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <section class="autopark section section--pattern-none" id="autopark">
+        <h2 class="autopark__title title title--section">Автопарк</h2>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <section class="contacts section section--pattern-side" id="contacts">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="contacts__title title title--section">Контакты</h2>
+      </div>
+    </div>
+    <div class="row align-items-lg-center">
+      <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+        <ul class="contacts__list row">
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--pin" width="22" height="23">
+              <use xlink:href="#icon-pin-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">Адрес:</h3>
+              <p>420124 РТ Казань, ул. Чистопольская дом 15 помещение 1003</p>
+            </div>
+
+          </li>
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--clock" width="22" height="23">
+              <use xlink:href="#icon-clock-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">Время работы:</h3>
+              <p>пн. - пт. с 9:00 до 18:00</p>
+            </div>
+          </li>
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--phone" width="22" height="23">
+              <use xlink:href="#icon-phone-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">Телефон:</h3>
+              <p>
+                <a class="contacts__link" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>
+              </p>
+            </div>
+          </li>
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--mail" width="22" height="23">
+              <use xlink:href="#icon-mail-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">E-mail:</h3>
+              <a class="contacts__link" href="mailto:ooofilko@mail.ru">ooofilko@mail.ru</a>
+            </div>
+          </li>
+          <li class="contacts__item col-12">
+            <svg class="contacts__icon contacts__icon--mail" width="22" height="23">
+              <use xlink:href="#icon-internet-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">Соцсети:</h3>
+              <ul class="contacts__social social row no-gutters">
+              <li class="social__item col-auto">
+                <svg class="social__icon" width="22" height="22">
+                  <use xlink:href="#icon-instagram-sprite"></use>
+                </svg>
+              </li>
+              <li class="social__item col-auto">
+                <svg class="social__icon" width="22" height="22">
+                  <use xlink:href="#icon-vk-sprite"></use>
+                </svg>
+              </li>
+              <li class="social__item col-auto">
+                <svg class="social__icon" width="22" height="22">
+                  <use xlink:href="#icon-twitter-sprite"></use>
+                </svg>
+              </li>
+            </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="map">
+        <iframe
+          class="map__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.45709921699!2d49.11127431607245!3d55.82002499427262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead5282b7ef3b%3A0x898aaffc61b99228!2z0YPQuy4g0KfQuNGB0YLQvtC_0L7Qu9GM0YHQutCw0Y8sIDE1LCDQmtCw0LfQsNC90YwsINCg0LXRgdC_LiDQotCw0YLQsNGA0YHRgtCw0L0sIDQyMDEyNA!5e0!3m2!1sru!2sru!4v1615802936976!5m2!1sru!2sru"
+          allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/mobile-menu.js"></script>
+</body>
+
+</html>

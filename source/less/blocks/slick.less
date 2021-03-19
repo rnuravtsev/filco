@@ -1,0 +1,24 @@
+.slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots li button:before {
+  content: '•';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 8px;
+  line-height: 20px;
+  font-family: 'slick', sans-serif;
+  text-align: center;
+  color: @secondary;
+}
+
+.slick-dots li.slick-active button::before {
+  opacity: 1;
+  color: @secondary;
+}

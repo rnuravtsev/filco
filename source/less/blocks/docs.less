@@ -1,0 +1,23 @@
+.docs__list {
+  list-style: none;
+  padding: 0;
+}
+
+.docs__item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.docs__icon {
+  width: 50px;
+  height: 25px;
+  margin-right: 10px;
+  fill: @secondary;
+}
+
+.docs__link {
+  .link();
+  &:hover {
+    .link-hover();
+  }
+}

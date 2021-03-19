@@ -1,0 +1,33 @@
+.page-header {
+  //position: fixed;
+  width: 100%;
+  min-height: 65px;
+  background-color: @white;
+  z-index: 9999;
+  &__logo {
+    height: 50px;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__link {
+    .link();
+    &:hover {
+      color: @primary;
+      text-decoration: none;
+    }
+  }
+}
+
+
+@media (min-width: @desktop) {
+  .page-header {
+    position: fixed;
+    max-height: 95px;
+    &__logo {
+      height: 75px;
+    }
+  }
+}

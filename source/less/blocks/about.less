@@ -1,0 +1,14 @@
+.about__list {
+    .reset-list();
+}
+
+.about__item {
+  border-right: @border-secondary;
+  border-bottom: @border-secondary;
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  &:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
+}
