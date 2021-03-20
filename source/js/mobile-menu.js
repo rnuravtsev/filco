@@ -1,14 +1,22 @@
 $( document ).ready(function() {
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+  $(document).on('click', 'a[href^="#"]', function (evt) {
+    evt.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-      });
-    });
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - 95
+    }, 500);
   });
+
+  // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //   anchor.addEventListener('click', function (e) {
+  //     e.preventDefault();
+  //
+  //     document.querySelector(this.getAttribute('href')).scrollIntoView({
+  //       behavior: 'smooth',
+  //     });
+  //   });
+  // });
 
   if ($( window ).width() < 768) {
     $('.main-nav__item').click(() => {
