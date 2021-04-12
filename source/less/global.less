@@ -18,7 +18,7 @@
 
 body {
   min-width: 320px;
-  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   background-color: @primary;
   color: @white;
 }
@@ -67,4 +67,22 @@ input[type="radio"].visually-hidden {
 .navbar-toggler-icon {
   width: auto;
   height: auto;
+}
+
+.thead-secondary {
+  color: @white;
+  background-color: @secondary;
+  border-color: @secondary;
+}
+
+.btn-secondary {
+  color: @white;
+  background-color: @secondary;
+  border-color: @secondary;
+}
+
+@media (max-width: 991.98px) {
+  * {
+    outline: none;
+  }
 }

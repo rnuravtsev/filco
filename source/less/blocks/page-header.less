@@ -8,6 +8,7 @@
   }
 
   &__link {
+    font-size: 13px;
     .link();
     &:hover {
       color: @primary;
@@ -16,6 +17,11 @@
   }
 }
 
+@media (min-width: 360px) {
+  .page-header__link {
+    font-size: 16px;
+  }
+}
 
 @media (min-width: @desktop) {
   .page-header {

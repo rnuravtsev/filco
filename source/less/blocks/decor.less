@@ -1,6 +1,9 @@
 .decor {
   padding-bottom: 20px;
-  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   color: @primary;
   background-color: @white;
   text-align: center;
@@ -12,19 +15,25 @@
       height: 100%;
     }
   }
+}
 
-  &__number {
-    font-size: 64px;
+.decor__number {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.decor__text {
+  font-size: 18px;
+  line-height: 1;
+
+  &--small {
+    font-size: 13px;
     font-weight: 700;
   }
+}
 
-  &__text {
-    font-size: 18px;
-    line-height: 1;
-
-    &--small {
-      font-size: 13px;
-      font-weight: 700;
-    }
+@media (min-width: @tablet) {
+  .decor__number {
+    font-size: 60px;
   }
 }

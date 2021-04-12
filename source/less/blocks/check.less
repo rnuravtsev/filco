@@ -1,0 +1,30 @@
+
+.check__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  &:checked + .check__box {
+    background-image: url("../img/icon-check.svg");
+  }
+  &:focus + .check__box {
+    .focus();
+  }
+  &:disabled + .check__box {
+    border-color: #7e7e7e;
+  }
+}
+
+.check__box {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 0.9em;
+  height: 0.9em;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid @secondary;
+  border-radius: 1px;
+}

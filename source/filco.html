@@ -14,6 +14,8 @@
         integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
         crossorigin="anonymous"/>
   <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   <title>Filco</title>
 </head>
 
@@ -30,7 +32,14 @@
       <svg class="page-header__icon page-header__icon--phone" width="20" height="20">
         <use xlink:href="#icon-phone-sprite"></use>
       </svg>
-      <a class="page-header__link" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>
+      <a class="page-header__link mr-3" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>
+    </div>
+    <div class="d-flex align-items-center">
+      <svg class="page-header__icon page-header__icon--callback" width="20" height="20">
+        <use xlink:href="#icon-callback-sprite"></use>
+      </svg>
+      <a class="page-header__link text-uppercase" href="javascript:;" data-fancybox data-src="#modal-callback">Обратный
+        звонок</a>
     </div>
     <button class="page-header__burger burger navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarResponsive">
@@ -135,7 +144,7 @@
   <section class="services section section--pattern-none" id="services">
     <h2 class="services__title title title--section">Услуги</h2>
     <ul class="services__list row no-gutters">
-      <li class="services__item col-12 col-sm-6 col-lg-4">
+      <li class="services__item col-6 col-sm-6 col-lg-4">
         <div class="services__decor">
           <svg class="services__icon">
             <use xlink:href="#icon-truck-sprite"></use>
@@ -143,7 +152,7 @@
         </div>
         <h3 class="services__subtitle">Доставка грузов</h3>
       </li>
-      <li class="services__item col-12 col-sm-6 col-lg-4">
+      <li class="services__item col-6 col-sm-6 col-lg-4">
         <div class="services__decor">
           <svg class="services__icon">
             <use xlink:href="#icon-truck-ref-sprite"></use>
@@ -151,7 +160,7 @@
         </div>
         <h3 class="services__subtitle">Доставка грузов<br> рефрижераторами</h3>
       </li>
-      <li class="services__item col-12 col-sm-6 col-lg-4">
+      <li class="services__item col-6 col-sm-6 col-lg-4">
         <div class="services__decor">
           <svg class="services__icon">
             <use xlink:href="#icon-truck-group-sprite"></use>
@@ -159,7 +168,7 @@
         </div>
         <h3 class="services__subtitle">Доставка сборных грузов</h3>
       </li>
-      <li class="services__item col-12 col-sm-6 col-lg-4">
+      <li class="services__item col-6 col-sm-6 col-lg-4">
         <div class="services__decor">
           <svg class="services__icon">
             <use xlink:href="#icon-insurance-sprite"></use>
@@ -167,7 +176,7 @@
         </div>
         <h3 class="services__subtitle">Страхование грузов</h3>
       </li>
-      <li class="services__item col-12 col-sm-6 col-lg-4">
+      <li class="services__item col-6 col-sm-6 col-lg-4">
         <div class="services__decor">
           <svg class="services__icon">
             <use xlink:href="#icon-customs-sprite"></use>
@@ -175,7 +184,7 @@
         </div>
         <h3 class="services__subtitle">Таможенное оформление</h3>
       </li>
-      <li class="services__item col-12 col-sm-6 col-lg-4">
+      <li class="services__item col-6 col-sm-6 col-lg-4">
         <div class="services__decor">
           <svg class="services__icon">
             <use xlink:href="#icon-storage-sprite"></use>
@@ -262,13 +271,63 @@
   </section>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="col-12">
-      <section class="autopark section section--pattern-none" id="autopark">
+  <section class="autopark section section--pattern-none" id="autopark">
+    <div class="row">
+      <div class="col-12">
         <h2 class="autopark__title title title--section">Автопарк</h2>
-      </section>
+      </div>
     </div>
-  </div>
+    <ul class="autopark__list autopark__slider">
+      <li class="autopark__item row no-gutters">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img class="autopark__image" src="img/autopark-jac-n80-508x385.png" alt="Jac n80">
+        </div>
+        <div class="autopark__specifications specifications col-12 col-md-auto">
+          <h3 class="specifications__title">Характеристики</h3>
+          <table class="specifications__table table table-striped">
+            <thead class="thead-secondary">
+            <tr>
+              <th scope="col">
+                Модель
+              </th>
+              <th scope="col">
+                Jac n80
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Максимальная загрузка</th>
+              <td>800 кг</td>
+            </tr>
+            <tr>
+              <th scope="row">Длина</th>
+              <td>2600 мм</td>
+            </tr>
+            <tr>
+              <th scope="row">Высота</th>
+              <td>1600 мм</td>
+            </tr>
+            <tr>
+              <th scope="row">Грузовместимость(объем)</th>
+              <td>6 куб. м</td>
+            </tr>
+            <tr>
+              <th scope="row">Ширина</th>
+              <td>1500 мм</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="autopark__item">
+        <img class="autopark__image" src="img/autopark-jac-n120-508x385.png" alt="Jac n120">
+      </li>
+      <li class="autopark__item">
+        <img class="autopark__image" src="img/autopark-gazon-508x385.png" alt="Gazon Next">
+      </li>
+    </ul>
+  </section>
 </div>
 <div class="container">
   <section class="contacts section" id="contacts">
@@ -320,12 +379,10 @@
           </li>
         </ul>
       </div>
-      <div class="col-12 col-lg-6">
+      <div class="d-none d-lg-block col-12 col-lg-6">
         <div class="map">
-          <iframe
-            class="map__iframe"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.45709921699!2d49.11127431607245!3d55.82002499427262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead5282b7ef3b%3A0x898aaffc61b99228!2z0YPQuy4g0KfQuNGB0YLQvtC_0L7Qu9GM0YHQutCw0Y8sIDE1LCDQmtCw0LfQsNC90YwsINCg0LXRgdC_LiDQotCw0YLQsNGA0YHRgtCw0L0sIDQyMDEyNA!5e0!3m2!1sru!2sru!4v1615802936976!5m2!1sru!2sru"
-            allowfullscreen="" loading="lazy"></iframe>
+          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCUU5ObrCC" width="560" height="400"
+                  allowfullscreen="true" style="position:relative;"></iframe>
         </div>
       </div>
     </div>
@@ -341,7 +398,8 @@
         <svg class="page-footer__icon page-footer__icon--pin" width="22" height="23">
           <use xlink:href="#icon-pin-sprite"></use>
         </svg>
-        <p class="page-footer__text">420124, г. Казань, ул. Чистопольская, 15 | 1003</p>
+        <a class="page-footer__link" href="https://yandex.ru/maps/-/CCUU5OUCcA" target="_blank" rel="noopener nofollow">420124,
+          г. Казань, ул. Чистопольская, 15 | 1003</a>
       </div>
       <div class="col-12 col-md-auto d-flex align-items-center justify-content-center ml-md-3 ml-lg-0">
         <span class="d-inline-block mr-3">Мы в социальных сетях:</span>
@@ -366,14 +424,42 @@
     </div>
     <hr class="page-footer__hr"/>
     <div class="row justify-content-around">
-      <div class="col-auto">
+      <div class="col-auto order-2 order-sm-1">
         <p class="page-footer__text">2021 @ Filco</p>
       </div>
-      <div class="col-auto">
+      <div class="col-auto order-1 order-sm-2">
         <a class="page-footer__link" href="#">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
+</div>
+<div class="modal" id="modal-callback">
+  <h2 class="modal__title">Обратный звонок</h2>
+  <form class="modal__form form form--callback">
+    <div class="form-group">
+      <label class="visually-hidden" for="customer-name">Ваше имя</label>
+      <input class="form__input form__input--name form-control" id="customer-name" type="text" name="customer-name"
+             placeholder="Введите ваше имя" required>
+    </div>
+    <div class="form-group">
+      <label class="visually-hidden" for="customer-phone">Ваш телефон</label>
+      <input class="form__input form__input--phone form-control" id="customer-phone" type="tel"
+             name="customer-phone" placeholder="Введите ваш номер телефона" required>
+      <small class="form-text text-muted">Введите телефон в соответсвие с шаблоном</small>
+    </div>
+    <div class="form-check">
+      <label class="form__label form__label--agree check form-check-label">
+        <input class="form__input form__input--checkbox check__input form-check-input" type="checkbox"
+               name="customer-agree" required>
+        <span class="form__custom-checkbox check__box"></span>
+        Я даю согласие на обработку персональных данных
+      </label>
+    </div>
+    <div class="form-group text-center">
+      <a class="form__link" href="#">Политика конфиденциальности</a>
+    </div>
+    <button class="modal__button btn btn-secondary" type="submit">Заказать звонок</button>
+  </form>
 </div>
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -386,8 +472,12 @@
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
         integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+        integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
         crossorigin="anonymous"></script>
-<script src="js/mobile-menu.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>
