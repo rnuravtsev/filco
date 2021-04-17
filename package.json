@@ -1,8 +1,7 @@
 {
-  "name": "sedona",
-  "version": "15.0.0",
+  "name": "filko",
+  "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Седона» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
@@ -48,6 +47,6 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "8.12"
+    "node": "14.16.0"
   }
 }
