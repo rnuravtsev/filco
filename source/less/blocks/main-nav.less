@@ -23,6 +23,7 @@
   .main-nav__item {
     border: 0;
     margin-right: 10px;
+    font-size: 14px;
   }
 }
 
@@ -30,6 +31,15 @@
   .main-nav {
     &__item {
       margin: 0 5px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-nav {
+    &__item {
+      font-size: inherit;
     }
   }
 }

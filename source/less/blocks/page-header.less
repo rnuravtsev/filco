@@ -4,6 +4,8 @@
   background-color: @white;
   z-index: 9999;
   &__icon {
+    width: 16px;
+    height: 16px;
     margin-right: 10px;
   }
 
@@ -23,12 +25,31 @@
   }
 }
 
+@media (min-width: @tablet) {
+  .page-header__link {
+    font-size: 14px;
+    text-transform: none;
+  }
+}
+
+@media (min-width: @laptop) {
+  .page-header__link {
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
+
 @media (min-width: @desktop) {
   .page-header {
-    //position: fixed;
     min-height: 95px;
+
     &__logo {
       height: 75px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
     }
   }
 }

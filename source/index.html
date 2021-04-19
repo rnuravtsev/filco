@@ -1,199 +1,483 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>"Седона"</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+  <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+        crossorigin="anonymous"/>
   <link href="css/style-min.css" rel="stylesheet">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <title>Filco</title>
 </head>
+
 <body>
 <div style="display: none">
   <include src="build/img/sprite.svg"></include>
 </div>
-<div class="shadow-wrapper">
-  <header class="page-header page-header--nojs">
-    <nav class="main-nav main-nav--opened">
-      <button class="main-nav__close nojs-close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a>Главная</a>
+
+<div class="fill fill--white w-100 fixed-top">
+  <header
+    class="page-header container page-header__nav main-nav navbar navbar-expand-md align-items-center justify-content-between">
+    <img class="page-header__logo logo" src="img/logo-filco.svg" alt="Логотип компании Filko">
+    <div class="d-none d-lg-flex align-items-center">
+      <svg class="page-header__icon page-header__icon--phone" width="20" height="20">
+        <use xlink:href="#icon-phone-sprite"></use>
+      </svg>
+      <a class="page-header__link mr-3" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>
+    </div>
+    <div class="d-flex align-items-center">
+      <svg class="page-header__icon page-header__icon--callback" width="20" height="20">
+        <use xlink:href="#icon-callback-sprite"></use>
+      </svg>
+      <a class="page-header__link" href="javascript:;" data-fancybox data-src="#modal-callback">Обратный
+        звонок</a>
+    </div>
+    <button class="page-header__burger burger navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon">
+            <svg class="burger__icon-menu" width="20" height="23">
+              <use xlink:href="#icon-menu-sprite"></use>
+            </svg>
+          </span>
+    </button>
+    <nav class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="main-nav__list navbar-nav ml-auto justify-content-around">
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#about">О компании</a>
         </li>
-        <li class="site-list__item">
-          <a href="photo.html">Фото и видео</a>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#services">Услуги</a>
         </li>
-        <li class="site-list__item">
-          <a href="form.html">Форма отзыва</a>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#consumers">Наши клиенты</a>
         </li>
-        <li class="site-list__item">
-          <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#docs">Документы</a>
+        </li>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#autopark">Автопарк</a>
+        </li>
+        <li class="main-nav__item nav-item">
+          <a class="main-nav__link" href="#contacts">Контакты</a>
         </li>
       </ul>
     </nav>
-    <a class="page-header__logo">
-      <picture>
-        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-        <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
-      </picture>
-    </a>
-    <div class="page-header__burger burger centre">
-      <button class="burger__button nojs-burger__button" type="button">
-        <svg class="burger__icon-menu" width="22" height="23">
-          <use xlink:href="#icon-menu-sprite"></use>
-        </svg>
-      </button>
-    </div>
   </header>
-  <main class="page-main">
-    <div class="page-main__bg">
-      <img class="page-main__image" src="img/text-sedona-index.svg" width="282" height="114" alt="Sedona">
-    </div>
-    <div class="page-main__wrapper centre">
-      <h1 class="page-main__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-      <p class="page-main__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-    </div>
-    <section class="features">
-      <h2 class="visually-hidden">Особенности</h2>
-      <ol class="features__list">
-        <li class="features__item features__item--blue-background">
-          <div class="features__wrapper centre">
-            <h3 class="features__title">Настоящий городок</h3>
-            <div class="features__number">&#8470;1</div>
-            <p class="features__description">Седона не аттракцион для туристов. Там течет своя жизнь</p>
-          </div>
-          <picture class="features__picture">
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-            <img class="features__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фото города Седона">
-          </picture>
-          <div class="add-list__wrapper">
-            <ul class="features__list add-list">
-              <li class="add-list__item">
-                <h4 class="add-list__title">Жилье</h4>
-                <p class="add-list__description">Рекомендуем пожить&nbsp; в настоящем мотеле, всё как в кино!</p>
-              </li>
-              <li class="add-list__item">
-                <h4 class="add-list__title">Сувениры</h4>
-                <p class="add-list__description">Не только китайского, но и местного производства!</p>
-              </li>
-              <li class="add-list__item">
-                <h4 class="add-list__title">Еда</h4>
-                <p class="add-list__description">Всегда заказыватйе фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="features__item features__item--blue-background">
-          <div class="features__wrapper centre">
-            <h3 class="features__title">Там есть мост дьявола</h3>
-            <div class="features__number">№2</div>
-            <p class="features__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          </div>
-          <picture class="features__picture">
-            <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-            <img class="features__image" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
-          </picture>
-        </li>
-        <li class="features__item">
-          <div class="features__wrapper centre">
-            <h3 class="features__title">Небольшая площадь</h3>
-            <div class="features__number">№3</div>
-            <p class="features__description">Все интересные места находятся очень близко</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <div class="features__wrapper centre">
-            <h3 class="features__title">Красивая дорога</h3>
-            <div class="features__number">№4</div>
-            <p class="features__description">Ехать в Седону из Лас-&nbsp;Вегаса совсем не&nbsp;скучно!</p>
-          </div>
-        </li>
-        <li class="features__item">
-          <div class="features__wrapper centre">
-            <h3 class="features__title">Мало&nbsp; туристов</h3>
-            <div class="features__number">№5</div>
-            <p class="features__description">Большинство едет в Гранд каньон и толпится там</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-    <section class="hotels">
-      <div class="hotels__wrapper centre">
-        <h2 class="hotels__title">Заинтересовались?</h2>
-        <p class="hotels__description">Укажите предполагаемые даты поездки,<br class="hotels__wrapping"> и мы покажем
-          вам лучшие предложения гостиниц
-          в
-          Седоне</p>
-        <a class="hotels__button button" href="hotel.html">Найти гостиницу</a>
-      </div>
-    </section>
-    <section class="page-main__map map">
-      <h2 class="visually-hidden">Местонахождение</h2>
-      <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837381.2115097459!2d-112.2016734418592!3d34.93362817567329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1541790941675" allowfullscreen></iframe>
-      <picture class="map__picture">
-        <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
-
-        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-        <img class="map__image" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Местонахождение">
-      </picture>
-    </section>
-  </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper centre">
-      <div class="page-footer__hashtag">#Visitsedona</div>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/sedonaaz">
-            <span class="visually-hidden">Мы в Твиттере</span>
-            <svg class="social__icon-twitter" width="17.5" height="14.663" aria-label="Переход на сайт Twitter">
-              <use xlink:href="#icon-twitter-sprite"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://ru-ru.facebook.com/VisitSedona/">
-            <span class="visually-hidden">Мы в Фейсбуке</span>
-            <svg class="social__icon-facebook" width="8.672" height="18.944" aria-label="Переход на сайт Facebook">
-              <use xlink:href="#icon-facebook-sprite"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com">
-            <span class="visually-hidden">Мы в Ютубе</span>
-            <svg class="social__icon-youtube" width="19.79" height="14.015" aria-label="Переход на сайт Youtube">
-              <use xlink:href="#icon-youtube-sprite"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__developer developer">
-        <span class="developer__text">Разработано</span>
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">HTML Academy</span>
-          <svg class="developer__icon-htmlacademy" width="27" height="34" aria-label="Переход на сайт HTML Acdemy">
-            <use xlink:href="#htmlacademy-sprite"></use>
+</div>
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <section class="intro section" id="intro">
+        <div class="intro__wrapper">
+          <h2 class="intro__title">Транспортная компания ООО "Филко"</h2>
+          <h3 class="intro__subtitle">Надёжно. Качественно. В срок.</h3>
+        </div>
+        <a class="intro__link" href="#about">
+          <svg class="intro__icon" width="30" height="30">
+            <use xlink:href="#icon-down-arrow-sprite"></use>
           </svg>
         </a>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <section class="about section section--pattern-center row" id="about">
+    <div class="col-12 col-lg-5">
+      <h2 class="about__title title title--section">О компании</h2>
+      <p class="about__text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque velit doloremque incidunt
+        soluta, doloribus architecto omnis odit deserunt consectetur dolores veritatis repellendus eius numquam porro
+        facere ipsum possimus. Sint ipsa sunt nihil, dolores soluta consequatur quo eveniet cum, commodi laborum
+        suscipit rerum consequuntur repellendus amet deserunt. Suscipit voluptates vel assumenda libero dicta fuga
+        reiciendis aliquid cum velit nesciunt rem animi eius eveniet quis deserunt aperiam eligendi sequi laudantium,
+        ad quas quia odio provident quod. Sequi sit quis cumque?
+      </p>
+    </div>
+    <div class="col-12 col-lg-7">
+      <ul class="about__list row no-gutters">
+        <li class="about__item col-6 col-md-4 order-1 order-md-1">
+          <div class="about__decor decor">
+            <strong class="decor__number">6</strong>
+            <p class="decor__text">офисов</p>
+            <p class="decor__text decor__text--small mb-0">По России</p>
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-4 order-md-2">
+          <div class="about__decor decor">
+            <strong class="decor__number">61</strong>
+            <p class="decor__text">грузовик</p>
+            <p class="decor__text decor__text--small mb-0">JAC, Газон</p>
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-2 order-md-3">
+          <div class="about__decor decor decor--image">
+            <img src="../img/about-decor.png" alt="">
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-3 order-md-4">
+          <div class="about__decor decor decor--image">
+            <img src="../img/about-decor.png" alt="">
+          </div>
+        </li>
+        <li class="about__item col-6 col-md-4 order-5">
+          <div class="about__decor decor">
+            <strong class="decor__number">150</strong>
+            <p class="decor__text">сотрудников</p>
+            <p class="decor__text decor__text--small mb-0">профессионалов</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <section class="services section section--pattern-none" id="services">
+    <h2 class="services__title title title--section">Услуги</h2>
+    <ul class="services__list row no-gutters">
+      <li class="services__item col-6 col-sm-6 col-lg-4">
+        <div class="services__decor">
+          <svg class="services__icon">
+            <use xlink:href="#icon-truck-sprite"></use>
+          </svg>
+        </div>
+        <h3 class="services__subtitle">Доставка грузов</h3>
+      </li>
+      <li class="services__item col-6 col-sm-6 col-lg-4">
+        <div class="services__decor">
+          <svg class="services__icon">
+            <use xlink:href="#icon-truck-ref-sprite"></use>
+          </svg>
+        </div>
+        <h3 class="services__subtitle">Доставка грузов<br> рефрижераторами</h3>
+      </li>
+      <li class="services__item col-6 col-sm-6 col-lg-4">
+        <div class="services__decor">
+          <svg class="services__icon">
+            <use xlink:href="#icon-truck-group-sprite"></use>
+          </svg>
+        </div>
+        <h3 class="services__subtitle">Доставка сборных грузов</h3>
+      </li>
+      <li class="services__item col-6 col-sm-6 col-lg-4">
+        <div class="services__decor">
+          <svg class="services__icon">
+            <use xlink:href="#icon-insurance-sprite"></use>
+          </svg>
+        </div>
+        <h3 class="services__subtitle">Страхование грузов</h3>
+      </li>
+      <li class="services__item col-6 col-sm-6 col-lg-4">
+        <div class="services__decor">
+          <svg class="services__icon">
+            <use xlink:href="#icon-customs-sprite"></use>
+          </svg>
+        </div>
+        <h3 class="services__subtitle">Таможенное оформление</h3>
+      </li>
+      <li class="services__item col-6 col-sm-6 col-lg-4">
+        <div class="services__decor">
+          <svg class="services__icon">
+            <use xlink:href="#icon-storage-sprite"></use>
+          </svg>
+        </div>
+        <h3 class="services__subtitle">Хранение грузов</h3>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="container">
+  <section class="consumers section section--pattern-none" id="consumers">
+    <h2 class="consumers__title title title--section">Наши клиенты</h2>
+    <ul class="consumers__slider">
+      <li class="">
+        <img class="consumers__image" src="../img/logo-magnit.png" alt="Магнит">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-lenta.png" alt="Лента">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-soglasie.png" alt="Согласие">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-sber.png" alt="Сбер">
+      </li>
+      <li class="">
+        <img class="consumers__image" src="../img/logo-vkusvill.png" alt="Вкусвилл">
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="container">
+  <section class="docs section section--pattern-none" id="docs">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="docs__title title title--section">Документы</h2>
+      </div>
+    </div>
+    <ul class="docs__list row">
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
+          itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
+          itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
+          itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
+          itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
+          itaque</a>
+      </li>
+      <li class="docs__item col-12">
+        <svg class="docs__icon" width="50" height="23">
+          <use xlink:href="#icon-docs-sprite"></use>
+        </svg>
+        <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
+          itaque</a>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="container">
+  <section class="autopark section section--pattern-none" id="autopark">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="autopark__title title title--section">Автопарк</h2>
+      </div>
+    </div>
+    <ul class="autopark__list autopark__slider">
+      <li class="autopark__item row no-gutters">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <img class="autopark__image" src="img/autopark-jac-n80-508x385.png" alt="Jac n80">
+        </div>
+        <div class="autopark__specifications specifications col-12 col-md-auto">
+          <h3 class="specifications__title">Характеристики</h3>
+          <table class="specifications__table table table-striped">
+            <thead class="thead-secondary">
+            <tr>
+              <th scope="col">
+                Модель
+              </th>
+              <th scope="col">
+                Jac n80
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Максимальная загрузка</th>
+              <td>800 кг</td>
+            </tr>
+            <tr>
+              <th scope="row">Длина</th>
+              <td>2600 мм</td>
+            </tr>
+            <tr>
+              <th scope="row">Высота</th>
+              <td>1600 мм</td>
+            </tr>
+            <tr>
+              <th scope="row">Грузовместимость(объем)</th>
+              <td>6 куб. м</td>
+            </tr>
+            <tr>
+              <th scope="row">Ширина</th>
+              <td>1500 мм</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="autopark__item">
+        <img class="autopark__image" src="img/autopark-jac-n120-508x385.png" alt="Jac n120">
+      </li>
+      <li class="autopark__item">
+        <img class="autopark__image" src="img/autopark-gazon-508x385.png" alt="Gazon Next">
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="container">
+  <section class="contacts section" id="contacts">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="contacts__title title title--section">Контакты</h2>
+      </div>
+    </div>
+    <div class="row align-items-lg-center">
+      <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+        <ul class="contacts__list row">
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--pin" width="22" height="23">
+              <use xlink:href="#icon-pin-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">Адрес:</h3>
+              <p>420124, г. Казань, ул. Чистопольская, 15 | 1003</p>
+            </div>
+          </li>
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--clock" width="22" height="23">
+              <use xlink:href="#icon-clock-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">Время работы:</h3>
+              <p>пн. - пт. с 9:00 до 18:00</p>
+            </div>
+          </li>
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--phone" width="22" height="23">
+              <use xlink:href="#icon-phone-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">Телефон:</h3>
+              <p>
+                <a class="contacts__link" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>
+              </p>
+            </div>
+          </li>
+          <li class="contacts__item col-12 col-sm-6 col-lg-12">
+            <svg class="contacts__icon contacts__icon--mail" width="22" height="23">
+              <use xlink:href="#icon-mail-sprite"></use>
+            </svg>
+            <div class="d-flex flex-column">
+              <h3 class="contacts__subtitle">E-mail:</h3>
+              <a class="contacts__link" href="mailto:ooofilko@mail.ru">ooofilko@mail.ru</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-lg-block col-12 col-lg-6">
+        <div class="map">
+          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCUU5ObrCC" width="560" height="400"
+                  allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="fill fill--primary-light w-100">
+  <footer class="page-footer container">
+    <div class="row no-gutters align-items-center justify-content-center justify-content-lg-between">
+      <div class="col-auto d-none d-lg-block">
+        <img class="page-footer__logo logo" src="img/logo-filco.svg" alt="Логотип компании Filko">
+      </div>
+      <div class="col-12 col-md-auto d-flex mb-3 mb-md-0 align-items-center justify-content-center">
+        <svg class="page-footer__icon page-footer__icon--pin" width="22" height="23">
+          <use xlink:href="#icon-pin-sprite"></use>
+        </svg>
+        <a class="page-footer__link" href="https://yandex.ru/maps/-/CCUU5OUCcA" target="_blank" rel="noopener nofollow">420124,
+          г. Казань, ул. Чистопольская, 15 | 1003</a>
+      </div>
+      <div class="col-12 col-md-auto d-flex align-items-center justify-content-center ml-md-3 ml-lg-0">
+        <span class="d-inline-block mr-3">Мы в социальных сетях:</span>
+        <ul class="contacts__social social row no-gutters">
+          <li class="social__item col-auto">
+            <svg class="social__icon" width="22" height="22">
+              <use xlink:href="#icon-instagram-sprite"></use>
+            </svg>
+          </li>
+          <li class="social__item col-auto">
+            <svg class="social__icon" width="22" height="22">
+              <use xlink:href="#icon-vk-sprite"></use>
+            </svg>
+          </li>
+          <li class="social__item col-auto">
+            <svg class="social__icon" width="22" height="22">
+              <use xlink:href="#icon-twitter-sprite"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="page-footer__hr"/>
+    <div class="row justify-content-around">
+      <div class="col-auto order-2 order-sm-1">
+        <p class="page-footer__text">2021 @ Filco</p>
+      </div>
+      <div class="col-auto order-1 order-sm-2">
+        <a class="page-footer__link" href="#">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
 </div>
-<script src="js/mobile-menu.js"></script>
-<script src="js/map.js"></script>
+<div class="modal" id="modal-callback">
+  <h2 class="modal__title">Обратный звонок</h2>
+  <form class="modal__form form form--callback">
+    <div class="form-group">
+      <label class="visually-hidden" for="customer-name">Ваше имя</label>
+      <input class="form__input form__input--name form-control" id="customer-name" type="text" name="customer-name"
+             placeholder="Введите ваше имя" required>
+    </div>
+    <div class="form-group">
+      <label class="visually-hidden" for="customer-phone">Ваш телефон</label>
+      <input class="form__input form__input--phone form-control" id="customer-phone" type="tel"
+             name="customer-phone" placeholder="Введите ваш номер телефона" required>
+      <small class="form-text text-muted">Введите телефон в соответсвие с шаблоном</small>
+    </div>
+    <div class="form-check">
+      <label class="form__label form__label--agree check form-check-label">
+        <input class="form__input form__input--checkbox check__input form-check-input" type="checkbox"
+               name="customer-agree" required>
+        <span class="form__custom-checkbox check__box"></span>
+        Я даю согласие на обработку персональных данных
+      </label>
+    </div>
+    <div class="form-group text-center">
+      <a class="form__link" href="#">Политика конфиденциальности</a>
+    </div>
+    <button class="modal__button btn btn-secondary" type="submit">Заказать звонок</button>
+  </form>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+        integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
+        crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
 </body>
+
 </html>
