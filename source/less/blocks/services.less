@@ -3,12 +3,20 @@
 }
 
 .services__item {
-  padding: 40px;
-  color: @white;
-  background-color: @primary-light;
   border-bottom: 1px solid @secondary;
   &:last-child {
     border-bottom: 0;
+  }
+}
+
+.services__link {
+  padding: 40px;
+  display: block;
+  height: 100%;
+  color: @secondary;
+  background-color: @primary-light;
+  &:hover {
+    color: @secondary;
   }
 }
 
@@ -21,6 +29,7 @@
   height: 70px;
   background-color: @white;
   border-radius: 50%;
+  transition: @transition-default;
 }
 
 .services__icon {
@@ -70,5 +79,25 @@
     &:nth-last-child(-n+3) {
       border-bottom: 0;
     }
+  }
+  .services__link {
+    color: @white;
+    background-color: @primary-light;
+    &:hover {
+      color: @white;
+      text-decoration: none;
+      background-color: @secondary;
+      .services__decor {
+        background-color: @white;
+      }
+      .services__icon {
+        fill: @primary-light;
+        transition: @transition-default;
+      }
+    }
+  }
+
+  .services__decor {
+    background-color: transparent;
   }
 }

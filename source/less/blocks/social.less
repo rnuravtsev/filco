@@ -20,3 +20,14 @@
     height: 25px;
   }
 }
+
+@media (min-width: @laptop) {
+  .social__icon {
+    cursor: pointer;
+    &:hover {
+      fill: @white;
+      //opacity: @opacity-default;
+      transition: @transition-default;
+    }
+  }
+}
