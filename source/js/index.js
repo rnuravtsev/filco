@@ -1,12 +1,21 @@
+import $ from 'jquery';
+import popper from 'popper.js';
+import bootstrap from 'bootstrap';
+import "../less/style.less";
+
+$(function() {
+  $('body').css('color', 'blue');
+});
+
+$(document).on('click', 'a[href^="#"]', function (evt) {
+  evt.preventDefault();
+
+  $('html, body').animate({
+    scrollTop: $($.attr(this, 'href')).offset().top - 95
+  }, 500);
+});
+
 $( document ).ready(function() {
-
-  $(document).on('click', 'a[href^="#"]', function (evt) {
-    evt.preventDefault();
-
-    $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 95
-    }, 500);
-  });
 
   if ($( window ).width() < 768) {
     $('.main-nav__item').click(() => {
