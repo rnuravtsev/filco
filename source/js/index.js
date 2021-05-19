@@ -1,12 +1,24 @@
+import 'popper.js'
+import 'bootstrap/dist/js/bootstrap.min'
+import 'slick-carousel/slick/slick'
+import '@fancyapps/fancybox/dist/jquery.fancybox.min'
+import Inputmask from "inputmask/lib/inputmask"
+// CSS
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@fancyapps/fancybox/dist/jquery.fancybox.min.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import '../less/style.less'
+
+$(document).on('click', 'a[href^="#"]', function (evt) {
+  evt.preventDefault();
+
+  $('html, body').animate({
+    scrollTop: $($.attr(this, 'href')).offset().top - 95
+  }, 500);
+});
+
 $( document ).ready(function() {
-
-  $(document).on('click', 'a[href^="#"]', function (evt) {
-    evt.preventDefault();
-
-    $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 95
-    }, 500);
-  });
 
   if ($( window ).width() < 768) {
     $('.main-nav__item').click(() => {
@@ -14,9 +26,7 @@ $( document ).ready(function() {
     });
   }
 
-  jQuery(function($){
-    $('.form__input--phone').mask("+7 (999) 999-99-99");
-  });
+  Inputmask({'mask': '+7 (999) 999-99-99'}).mask('.form__input--phone')
 
   $('.consumers__slider').slick({
     autoplay: false,

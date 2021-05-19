@@ -2,41 +2,30 @@
 <html lang="en">
 
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-  <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-        integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
-        crossorigin="anonymous"/>
-  <link href="css/style-min.css" rel="stylesheet">
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   <title>Filco</title>
 </head>
 
 <body>
-<div style="display: none">
-  <include src="build/img/sprite.svg"></include>
-</div>
-
 <div class="fill fill--white w-100 fixed-top">
   <header
     class="page-header container page-header__nav main-nav navbar navbar-expand-md align-items-center justify-content-between">
     <img class="page-header__logo logo" src="img/logo-filco.svg" alt="Логотип компании Filko">
     <div class="d-none d-lg-flex align-items-center">
       <svg class="page-header__icon page-header__icon--phone" width="20" height="20">
-        <use xlink:href="#icon-phone-sprite"></use>
+        <use xlink:href="img/sprite.svg#sprite-icon-phone"></use>
       </svg>
       <a class="page-header__link mr-3" href="tel:+7(917)274-01-92">+7 (917) 274-01-92</a>
     </div>
     <div class="d-flex align-items-center">
+      <i class="fas fa-phone-volume"></i>
       <svg class="page-header__icon page-header__icon--callback" width="20" height="20">
-        <use xlink:href="#icon-callback-sprite"></use>
+        <use xlink:href="img/sprite.svg#sprite-icon-callback"></use>
       </svg>
       <a class="page-header__link" href="javascript:;" data-fancybox data-src="#modal-callback">Обратный
         звонок</a>
@@ -45,7 +34,7 @@
             data-target="#navbarResponsive">
           <span class="navbar-toggler-icon">
             <svg class="burger__icon-menu" width="20" height="23">
-              <use xlink:href="#icon-menu-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-menu"></use>
             </svg>
           </span>
     </button>
@@ -83,7 +72,7 @@
         </div>
         <a class="intro__link" href="#about">
           <svg class="intro__icon" width="30" height="30">
-            <use xlink:href="#icon-down-arrow-sprite"></use>
+            <use xlink:href="img/sprite.svg#sprite-icon-down-arrow"></use>
           </svg>
         </a>
       </section>
@@ -148,7 +137,7 @@
         <a class="services__link" href="javascript:;" data-fancybox data-src="#modal-callback">
           <div class="services__decor">
             <svg class="services__icon">
-              <use xlink:href="#icon-truck-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-truck"></use>
             </svg>
           </div>
           <h3 class="services__subtitle">Доставка грузов</h3>
@@ -158,7 +147,7 @@
         <a class="services__link" href="javascript:;" data-fancybox data-src="#modal-callback">
           <div class="services__decor">
             <svg class="services__icon">
-              <use xlink:href="#icon-truck-ref-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-truck-ref"></use>
             </svg>
           </div>
           <h3 class="services__subtitle">Доставка грузов<br> рефрижераторами</h3>
@@ -168,7 +157,7 @@
         <a class="services__link" href="javascript:;" data-fancybox data-src="#modal-callback">
           <div class="services__decor">
             <svg class="services__icon">
-              <use xlink:href="#icon-truck-group-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-truck-group"></use>
             </svg>
           </div>
           <h3 class="services__subtitle">Доставка сборных грузов</h3>
@@ -178,7 +167,7 @@
         <a class="services__link" href="javascript:;" data-fancybox data-src="#modal-callback">
           <div class="services__decor">
             <svg class="services__icon">
-              <use xlink:href="#icon-insurance-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-insurance"></use>
             </svg>
           </div>
           <h3 class="services__subtitle">Страхование грузов</h3>
@@ -188,7 +177,7 @@
         <a class="services__link" href="javascript:;" data-fancybox data-src="#modal-callback">
           <div class="services__decor">
             <svg class="services__icon">
-              <use xlink:href="#icon-customs-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-customs"></use>
             </svg>
           </div>
           <h3 class="services__subtitle">Таможенное оформление</h3>
@@ -198,7 +187,7 @@
         <a class="services__link" href="javascript:;" data-fancybox data-src="#modal-callback">
           <div class="services__decor">
             <svg class="services__icon">
-              <use xlink:href="#icon-storage-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-storage"></use>
             </svg>
           </div>
           <h3 class="services__subtitle">Хранение грузов</h3>
@@ -239,42 +228,42 @@
     <ul class="docs__list row">
       <li class="docs__item col-12">
         <svg class="docs__icon" width="50" height="23">
-          <use xlink:href="#icon-docs-sprite"></use>
+          <use xlink:href="img/sprite.svg#sprite-icon-docs"></use>
         </svg>
         <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
           itaque</a>
       </li>
       <li class="docs__item col-12">
         <svg class="docs__icon" width="50" height="23">
-          <use xlink:href="#icon-docs-sprite"></use>
+          <use xlink:href="img/sprite.svg#sprite-icon-docs"></use>
         </svg>
         <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
           itaque</a>
       </li>
       <li class="docs__item col-12">
         <svg class="docs__icon" width="50" height="23">
-          <use xlink:href="#icon-docs-sprite"></use>
+          <use xlink:href="img/sprite.svg#sprite-icon-docs"></use>
         </svg>
         <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
           itaque</a>
       </li>
       <li class="docs__item col-12">
         <svg class="docs__icon" width="50" height="23">
-          <use xlink:href="#icon-docs-sprite"></use>
+          <use xlink:href="img/sprite.svg#sprite-icon-docs"></use>
         </svg>
         <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
           itaque</a>
       </li>
       <li class="docs__item col-12">
         <svg class="docs__icon" width="50" height="23">
-          <use xlink:href="#icon-docs-sprite"></use>
+          <use xlink:href="img/sprite.svg#sprite-icon-docs"></use>
         </svg>
         <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
           itaque</a>
       </li>
       <li class="docs__item col-12">
         <svg class="docs__icon" width="50" height="23">
-          <use xlink:href="#icon-docs-sprite"></use>
+          <use xlink:href="img/sprite.svg#sprite-icon-docs"></use>
         </svg>
         <a class="docs__link" href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae
           itaque</a>
@@ -353,7 +342,7 @@
         <ul class="contacts__list row">
           <li class="contacts__item col-12 col-sm-6 col-lg-12">
             <svg class="contacts__icon contacts__icon--pin" width="22" height="23">
-              <use xlink:href="#icon-pin-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-pin"></use>
             </svg>
             <div class="d-flex flex-column">
               <h3 class="contacts__subtitle">Адрес:</h3>
@@ -362,7 +351,7 @@
           </li>
           <li class="contacts__item col-12 col-sm-6 col-lg-12">
             <svg class="contacts__icon contacts__icon--clock" width="22" height="23">
-              <use xlink:href="#icon-clock-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-clock"></use>
             </svg>
             <div class="d-flex flex-column">
               <h3 class="contacts__subtitle">Время работы:</h3>
@@ -371,7 +360,7 @@
           </li>
           <li class="contacts__item col-12 col-sm-6 col-lg-12">
             <svg class="contacts__icon contacts__icon--phone" width="22" height="23">
-              <use xlink:href="#icon-phone-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-phone"></use>
             </svg>
             <div class="d-flex flex-column">
               <h3 class="contacts__subtitle">Телефон:</h3>
@@ -382,7 +371,7 @@
           </li>
           <li class="contacts__item col-12 col-sm-6 col-lg-12">
             <svg class="contacts__icon contacts__icon--mail" width="22" height="23">
-              <use xlink:href="#icon-mail-sprite"></use>
+              <use xlink:href="img/sprite.svg#sprite-icon-mail"></use>
             </svg>
             <div class="d-flex flex-column">
               <h3 class="contacts__subtitle">E-mail:</h3>
@@ -408,7 +397,7 @@
       </div>
       <div class="col-12 col-md-auto d-flex mb-3 mb-md-0 align-items-center justify-content-center">
         <svg class="page-footer__icon page-footer__icon--pin" width="22" height="23">
-          <use xlink:href="#icon-pin-sprite"></use>
+          <use xlink:href="img/sprite.svg#sprite-icon-pin"></use>
         </svg>
         <a class="page-footer__link" href="https://yandex.ru/maps/-/CCUU5OUCcA" target="_blank" rel="noopener nofollow">420124,
           г. Казань, ул. Чистопольская, 15 | 1003</a>
@@ -419,21 +408,21 @@
           <li class="social__item col-auto">
             <a class="social__link" href="https://instagram.com" target="_blank" rel="noopener">
               <svg class="social__icon" width="22" height="22">
-                <use xlink:href="#icon-instagram-sprite"></use>
+                <use xlink:href="img/sprite.svg#sprite-icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item col-auto">
             <a class="social__link" href="https://vk.com" target="_blank" rel="noopener">
               <svg class="social__icon social__icon--vk" width="22" height="22">
-                <use xlink:href="#icon-outline-vk-sprite"></use>
+                <use xlink:href="img/sprite.svg#sprite-icon-outline-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item col-auto">
             <a class="social__link" href="https://twitter.com" target="_blank" rel="noopener">
               <svg class="social__icon" width="22" height="22">
-                <use xlink:href="#icon-outline-twitter-sprite"></use>
+                <use xlink:href="img/sprite.svg#sprite-icon-outline-twitter"></use>
               </svg>
             </a>
           </li>
@@ -479,23 +468,6 @@
     <button class="modal__button btn btn-secondary" type="submit">Заказать звонок</button>
   </form>
 </div>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
-        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
-        crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
-        integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
-        crossorigin="anonymous"></script>
-<script src="js/index.js"></script>
+<script src="./index.js"></script>
 </body>
-
 </html>

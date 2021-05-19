@@ -2,41 +2,36 @@
   "name": "filko",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "del build && webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack serve --mode development",
+    "del": "del build"
+  },
   "devDependencies": {
+    "@babel/core": "7.13.16",
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.1.x",
-    "browser-sync": "2.26.3",
-    "del": "3.0.0",
-    "gulp": "4.0.x",
-    "gulp-csso": "3.0.1",
-    "gulp-htmlmin": "5.0.1",
-    "gulp-imagemin": "4.1.0",
-    "gulp-less": "4.0.x",
-    "gulp-plumber": "1.2.x",
-    "gulp-postcss": "8.0.x",
-    "gulp-posthtml": "3.0.4",
-    "gulp-rename": "1.4.0",
-    "gulp-svgstore": "7.0.0",
-    "gulp-uglify": "3.0.1",
-    "gulp-webp": "3.0.0",
-    "pixel-glass": "1.0.13",
-    "posthtml-include": "1.2.0",
+    "babel-loader": "8.2.2",
+    "copy-webpack-plugin": "8.1.1",
+    "css-loader": "5.2.4",
+    "del": "6.0.0",
+    "html-webpack-plugin": "5.3.1",
+    "less": "4.1.1",
+    "less-loader": "8.1.1",
+    "style-loader": "2.0.0",
     "stylelint": "9.6.x",
     "stylelint-config-htmlacademy": "0.1.x",
+    "svg-spritemap-webpack-plugin": "4.0.2",
     "svgo": "1.1.1",
-    "svgxuse": "1.2.6"
-  },
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
-    "start": "gulp start"
+    "svgo-loader": "3.0.0",
+    "svgxuse": "1.2.6",
+    "url-loader": "4.1.1",
+    "webpack": "5.37.0",
+    "webpack-cli": "4.7.0",
+    "webpack-dev-server": "3.11.2"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "last 2 versions"
   ],
   "editorconfig-cli": [
     "*.json",
@@ -48,5 +43,13 @@
   ],
   "engines": {
     "node": "14.16.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "3.5.7",
+    "bootstrap": "4.6.0",
+    "inputmask": "5.0.5",
+    "jquery": "3.6.0",
+    "popper.js": "1.16.1",
+    "slick-carousel": "1.8.1"
   }
 }
