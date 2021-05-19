@@ -1,4 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -12,7 +16,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     port: 1337,
-    open: true,
+    open: false,
   },
   devtool: "source-map",
   module: {
@@ -26,6 +30,11 @@ module.exports = {
         }
       },
       // CSS
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      // LESS
       {
         test: /\.less$/i,
         use: [
@@ -41,29 +50,55 @@ module.exports = {
       {
         test: /\.svg$/,
         type: 'asset/resource',
-        // use: 'svgo-loader',
         generator: {
-          filename: 'img/[hash][ext]'
+          filename: 'img/icons/[name][ext]'
         },
       },
       // Images
       {
         test: /\.(webp|png|jpg|gif)$/i,
-        loader: 'url-loader',
+        // loader: 'url-loader',
         type: 'asset/resource',
         generator: {
-          filename: 'img/[hash][ext]'
-        },
+          filename: 'img/[name][ext]'
+        }
       },
       // Fonts
       {
         test: /\.(woff|woff2|ttf|eot)$/,
         type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
       }
     ]
   },
   experiments: {
     asset: true
   },
-  plugins: []
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
+    new HtmlWebpackPlugin({
+      template: './source/index.html',
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'source/img/**/*',
+          to: 'img/[name][ext]'
+        }
+      ]
+    }),
+    new SVGSpritemapPlugin('./source/img/sprite/*.svg', {
+      output: {
+        filename: 'img/sprite.svg'
+      },
+      sprite: {
+        prefix: 'sprite-'
+      }
+    })
+  ]
 };
