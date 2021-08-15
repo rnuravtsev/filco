@@ -23,11 +23,16 @@
 
 @media (min-width: @laptop) {
   .social__icon {
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     &:hover {
-      fill: @white;
-      //opacity: @opacity-default;
+      opacity: @opacity-default;
       transition: @transition-default;
+    }
+    &--vk {
+      width: 30px;
+      height: 30px;
     }
   }
 }

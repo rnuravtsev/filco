@@ -1,17 +1,35 @@
 .form {
   display: flex;
   flex-direction: column;
+
+  &--callback {
+    .form-check {
+      padding-left: 1.55rem;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .form__label {
+  color: @white;
   user-select: none;
-  &--agree {
-    max-width: 220px;
+}
+
+.form__input {
+  &:required {
+    &:valid {
+      box-shadow: 0 0 0 2px forestgreen;
+    }
+
+    &:invalid {
+      box-shadow: 0 0 0 2px red;
+    }
   }
 }
 
 .form__link {
   .link();
+
   &:hover {
     .link-hover();
   }

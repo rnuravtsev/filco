@@ -1,61 +1,46 @@
 import 'popper.js'
 import 'bootstrap/dist/js/bootstrap.min'
-import 'slick-carousel/slick/slick'
-import '@fancyapps/fancybox/dist/jquery.fancybox.min'
 import Inputmask from "inputmask/lib/inputmask"
+
+import submitForm from "./modules/submitForm";
+
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '@fancyapps/fancybox/dist/jquery.fancybox.min.css'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import '@fancyapps/ui/dist/fancybox.css'
+import 'swiper/swiper-bundle.min.css'
 import '../less/style.less'
 
-$(document).on('click', 'a[href^="#"]', function (evt) {
-  evt.preventDefault();
+import { createDefaultSwiper } from "./modules/slider"
+import { customScroll } from "./utils"
 
-  $('html, body').animate({
-    scrollTop: $($.attr(this, 'href')).offset().top - 95
-  }, 500);
-});
 
-$( document ).ready(function() {
+document.querySelectorAll('a[href^="#"]').forEach((el) => {
+  el.addEventListener('click',function (evt) {
+    evt.preventDefault()
+    customScroll(el.attributes.href.value, -95)
+  })
+})
 
-  if ($( window ).width() < 768) {
-    $('.main-nav__item').click(() => {
-      $('.navbar-collapse').removeClass('show');
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  createDefaultSwiper({
+    container: '.consumers__swiper',
+    pagination: '.consumers-swiper-pagination',
+    navNext: '.consumers-swiper-button-next',
+    navPrev: '.consumers-swiper-button-prev',
+  })
+
+  if (window.innerWidth < 768) {
+    document.querySelectorAll('.main-nav__item').forEach((el) => {
+      el.addEventListener('click', () => {
+        document.querySelector('.navbar-collapse').classList.remove('show')
+      })
+    })
   }
 
   Inputmask({'mask': '+7 (999) 999-99-99'}).mask('.form__input--phone')
+  submitForm();
+})
 
-  $('.consumers__slider').slick({
-    autoplay: false,
-    dots: true,
-    arrows: false,
-    adaptiveHeight: true,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-
-  $('.autopark__slider').slick({
-    autoplay: false,
-    dots: true,
-    arrows: false,
-    adaptiveHeight: true,
-    slidesToShow: 1,
-  });
-
-});
+if (module.hot) {
+  module.hot.accept()
+}

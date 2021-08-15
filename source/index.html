@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="fonts/ptsans.woff2" as="font">
-  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin>
   <title>Filco</title>
 </head>
 
@@ -52,9 +52,9 @@
         <li class="main-nav__item nav-item">
           <a class="main-nav__link" href="#docs">Документы</a>
         </li>
-        <li class="main-nav__item nav-item">
-          <a class="main-nav__link" href="#autopark">Автопарк</a>
-        </li>
+<!--        <li class="main-nav__item nav-item">-->
+<!--          <a class="main-nav__link" href="#autopark">Автопарк</a>-->
+<!--        </li>-->
         <li class="main-nav__item nav-item">
           <a class="main-nav__link" href="#contacts">Контакты</a>
         </li>
@@ -80,16 +80,17 @@
   </div>
 </div>
 <div class="container">
-  <section class="about section section--pattern-center row" id="about">
+  <section class="about section section-pattern section-pattern--right row" id="about">
     <div class="col-12 col-lg-5">
       <h2 class="about__title title title--section">О компании</h2>
       <p class="about__text">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vitae itaque velit doloremque incidunt
-        soluta, doloribus architecto omnis odit deserunt consectetur dolores veritatis repellendus eius numquam porro
-        facere ipsum possimus. Sint ipsa sunt nihil, dolores soluta consequatur quo eveniet cum, commodi laborum
-        suscipit rerum consequuntur repellendus amet deserunt. Suscipit voluptates vel assumenda libero dicta fuga
-        reiciendis aliquid cum velit nesciunt rem animi eius eveniet quis deserunt aperiam eligendi sequi laudantium,
-        ad quas quia odio provident quod. Sequi sit quis cumque?
+        На сегодняшний день ООО "Филко" является динамичной и стабильно развивающейся транспортно-экспедиционной компанией,
+        имеющей большой штат квалифицированных специалистов. Богатый опыт, накопленный за годы работы, позволяет
+        нам эффективно осуществлять транспортно-экспедиционное обслуживание любых клиентов.
+      </p>
+      <p class="about__text">
+        Наш собственный автопарк насчитывает 60 малотоннажных автомобилей (от 2019 до 2020 г.выпуска) объемом кузова до 50м<sup>3</sup>,
+        который регулярно обновляется.
       </p>
     </div>
     <div class="col-12 col-lg-7">
@@ -126,6 +127,85 @@
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+</div>
+<div class="container">
+  <section class="features section" id="features">
+    <h2 class="features__title title title--section">Преимущества</h2>
+    <ul class="features__list row no-gutters">
+      <li class="features__item col-6 col-sm-6 col-lg-4">
+
+        <div class="features__decor">
+          <svg class="features__icon">
+            <use xlink:href="img/sprite.svg#sprite-icon-truck"></use>
+          </svg>
+        </div>
+        <h3 class="features__subtitle">Современный автопарк</h3>
+      </li>
+      <li class="features__item col-6 col-sm-6 col-lg-4">
+
+        <div class="features__decor">
+          <svg class="features__icon">
+            <use xlink:href="img/sprite.svg#sprite-icon-insurance"></use>
+          </svg>
+        </div>
+        <h3 class="features__subtitle">Страхование ответственности перевозчика</h3>
+      </li>
+      <li class="features__item col-6 col-sm-6 col-lg-4">
+
+        <div class="features__decor">
+          <svg class="features__icon">
+            <use xlink:href="img/sprite.svg#sprite-icon-truck-group"></use>
+          </svg>
+        </div>
+        <h3 class="features__subtitle">Индивидуальный подход к каждому клиенту</h3>
+      </li>
+      <li class="features__item col-6 col-sm-6 col-lg-4">
+
+        <div class="features__decor">
+          <svg class="features__icon">
+            <use xlink:href="img/sprite.svg#sprite-icon-insurance"></use>
+          </svg>
+        </div>
+        <h3 class="features__subtitle">Отслеживание груза (GPS трекинг) 24 часа</h3>
+      </li>
+      <li class="features__item col-6 col-sm-6 col-lg-4">
+
+        <div class="features__decor">
+          <svg class="features__icon">
+            <use xlink:href="img/sprite.svg#sprite-icon-customs"></use>
+          </svg>
+        </div>
+        <h3 class="features__subtitle">Работа с исключительно надежными и проверенными партнерами</h3>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="container">
+  <section class="consumers section" id="consumers">
+    <h2 class="consumers__title title title--section">Наши клиенты</h2>
+    <div class="consumers__swiper swiper-container">
+      <ul class="consumers__slider swiper-wrapper">
+        <li class="swiper-slide">
+          <img class="consumers__image" src="../img/logo-magnit.webp" alt="Магнит">
+        </li>
+        <li class="swiper-slide">
+          <img class="consumers__image" src="../img/logo-lenta.webp" alt="Лента">
+        </li>
+        <li class="swiper-slide">
+          <img class="consumers__image" src="../img/logo-soglasie.webp" alt="Согласие">
+        </li>
+        <li class="swiper-slide">
+          <img class="consumers__image" src="../img/logo-sber.webp" alt="Сбер">
+        </li>
+        <li class="swiper-slide">
+          <img class="consumers__image" src="../img/logo-vkusvill.webp" alt="Вкусвилл">
+        </li>
+      </ul>
+      <div class="swiper-pagination consumers-swiper-pagination"></div>
+      <!--      <div class="consumers-swiper-button-prev swiper-button-prev"></div>-->
+      <!--      <div class="consumers-swiper-button-next swiper-button-next"></div>-->
     </div>
   </section>
 </div>
@@ -197,28 +277,6 @@
   </section>
 </div>
 <div class="container">
-  <section class="consumers section section--pattern-none" id="consumers">
-    <h2 class="consumers__title title title--section">Наши клиенты</h2>
-    <ul class="consumers__slider">
-      <li class="">
-        <img class="consumers__image" src="../img/logo-magnit.webp" alt="Магнит">
-      </li>
-      <li class="">
-        <img class="consumers__image" src="../img/logo-lenta.webp" alt="Лента">
-      </li>
-      <li class="">
-        <img class="consumers__image" src="../img/logo-soglasie.webp" alt="Согласие">
-      </li>
-      <li class="">
-        <img class="consumers__image" src="../img/logo-sber.webp" alt="Сбер">
-      </li>
-      <li class="">
-        <img class="consumers__image" src="../img/logo-vkusvill.webp" alt="Вкусвилл">
-      </li>
-    </ul>
-  </section>
-</div>
-<div class="container">
   <section class="docs section section--pattern-none" id="docs">
     <div class="row">
       <div class="col-12">
@@ -271,67 +329,72 @@
     </ul>
   </section>
 </div>
+<!--<div class="container">-->
+<!--  <section class="autopark section section&#45;&#45;pattern-none" id="autopark">-->
+<!--    <div class="row">-->
+<!--      <div class="col-12">-->
+<!--        <h2 class="autopark__title title title&#45;&#45;section">Автопарк</h2>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="autopark__swiper swiper-container">-->
+<!--      <ul class="autopark__list autopark__slider swiper-wrapper">-->
+<!--        <li class="autopark__item row no-gutters swiper-slide">-->
+<!--          <div class="col-12 col-md-6 mb-3 mb-md-0">-->
+<!--            <img class="autopark__image" src="img/autopark-jac-n80-508x385.webp" alt="Jac n80">-->
+<!--          </div>-->
+<!--          <div class="autopark__specifications specifications col-12 col-md-auto col-lg-auto">-->
+<!--            <h3 class="specifications__title">Характеристики</h3>-->
+<!--            <table class="specifications__table table table-striped">-->
+<!--              <thead class="thead-secondary">-->
+<!--              <tr>-->
+<!--                <th scope="col">-->
+<!--                  Модель-->
+<!--                </th>-->
+<!--                <th scope="col">-->
+<!--                  Jac n80-->
+<!--                </th>-->
+<!--              </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <th scope="row">Максимальная загрузка</th>-->
+<!--                <td>800 кг</td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <th scope="row">Длина</th>-->
+<!--                <td>2600 мм</td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <th scope="row">Высота</th>-->
+<!--                <td>1600 мм</td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <th scope="row">Грузовместимость(объем)</th>-->
+<!--                <td>6 куб. м</td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <th scope="row">Ширина</th>-->
+<!--                <td>1500 мм</td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </li>-->
+<!--        <li class="autopark__item swiper-slide">-->
+<!--          <img class="autopark__image" src="img/autopark-jac-n120-508x385.webp" alt="Jac n120">-->
+<!--        </li>-->
+<!--        <li class="autopark__item swiper-slide">-->
+<!--          <img class="autopark__image" src="img/autopark-gazon-508x385.webp" alt="Gazon Next">-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--      <div class="autopark-swiper-pagination swiper-pagination"></div>-->
+<!--      &lt;!&ndash;      <div class="autopark-swiper-button-prev swiper-button-prev"></div>&ndash;&gt;-->
+<!--      &lt;!&ndash;      <div class="autopark-swiper-button-next swiper-button-next"></div>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </section>-->
+<!--</div>-->
 <div class="container">
-  <section class="autopark section section--pattern-none" id="autopark">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="autopark__title title title--section">Автопарк</h2>
-      </div>
-    </div>
-    <ul class="autopark__list autopark__slider">
-      <li class="autopark__item row no-gutters">
-        <div class="col-12 col-md-6 mb-3 mb-md-0">
-          <img class="autopark__image" src="img/autopark-jac-n80-508x385.webp" alt="Jac n80">
-        </div>
-        <div class="autopark__specifications specifications col-12 col-md-auto">
-          <h3 class="specifications__title">Характеристики</h3>
-          <table class="specifications__table table table-striped">
-            <thead class="thead-secondary">
-            <tr>
-              <th scope="col">
-                Модель
-              </th>
-              <th scope="col">
-                Jac n80
-              </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th scope="row">Максимальная загрузка</th>
-              <td>800 кг</td>
-            </tr>
-            <tr>
-              <th scope="row">Длина</th>
-              <td>2600 мм</td>
-            </tr>
-            <tr>
-              <th scope="row">Высота</th>
-              <td>1600 мм</td>
-            </tr>
-            <tr>
-              <th scope="row">Грузовместимость(объем)</th>
-              <td>6 куб. м</td>
-            </tr>
-            <tr>
-              <th scope="row">Ширина</th>
-              <td>1500 мм</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </li>
-      <li class="autopark__item">
-        <img class="autopark__image" src="img/autopark-jac-n120-508x385.webp" alt="Jac n120">
-      </li>
-      <li class="autopark__item">
-        <img class="autopark__image" src="img/autopark-gazon-508x385.webp" alt="Gazon Next">
-      </li>
-    </ul>
-  </section>
-</div>
-<div class="container">
-  <section class="contacts section" id="contacts">
+  <section class="contacts section section-pattern section-pattern--left" id="contacts">
     <div class="row">
       <div class="col-12">
         <h2 class="contacts__title title title--section">Контакты</h2>
@@ -381,10 +444,13 @@
         </ul>
       </div>
       <div class="d-none d-lg-block col-12 col-lg-6">
-        <div class="map">
-          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCUU5ObrCC" width="560" height="400"
-                  allowfullscreen="true" style="position:relative;"></iframe>
-        </div>
+        <a class="contacts__link contacts__link--map" href="https://yandex.ru/maps/-/CCU4vGCbgB" target="_blank" rel="noreferrer noopener">
+          <img class="map" src="../../img/bg-map.jpg" alt="Чистопольская 15 | 1003">
+<!--                  <div class="map">-->
+          <!--          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CCUU5ObrCC" width="560" height="400"-->
+          <!--                  allowfullscreen="true" style="position:relative;"></iframe>-->
+<!--                  </div>-->
+        </a>
       </div>
     </div>
   </section>
@@ -403,7 +469,6 @@
           г. Казань, ул. Чистопольская, 15 | 1003</a>
       </div>
       <div class="col-12 col-md-auto d-flex align-items-center justify-content-center ml-md-3 ml-lg-0">
-        <span class="d-inline-block mr-3">Мы в социальных сетях:</span>
         <ul class="contacts__social social row no-gutters">
           <li class="social__item col-auto">
             <a class="social__link" href="https://instagram.com" target="_blank" rel="noopener">
@@ -434,35 +499,38 @@
       <div class="col-auto order-2 order-sm-1">
         <p class="page-footer__text">2021 @ Filco</p>
       </div>
-      <div class="col-auto order-1 order-sm-2">
+      <div class="col-auto order-1 order-sm-2 mb-2 mb-sm-0">
         <a class="page-footer__link" href="#">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
 </div>
-<div class="modal" id="modal-callback">
+<div class="modal modal--callback" id="modal-callback">
   <h2 class="modal__title">Связаться с нами</h2>
-  <form class="modal__form form form--callback">
+  <form class="modal__form form form--callback" autocomplete="on">
     <div class="form-group">
-      <label class="visually-hidden" for="customer-name">Ваше имя</label>
-      <input class="form__input form__input--name form-control" id="customer-name" type="text" name="customer-name"
+      <label class="visually-hidden">
+        <input name="name">
+      </label>
+      <label class="visually-hidden" for="customerName">Ваше имя</label>
+      <input class="form__input form__input--name form-control" id="customerName" type="text" name="customerName"
              placeholder="Введите ваше имя" required>
     </div>
     <div class="form-group">
-      <label class="visually-hidden" for="customer-phone">Ваш телефон</label>
-      <input class="form__input form__input--phone form-control" id="customer-phone" type="tel"
-             name="customer-phone" placeholder="Введите ваш номер телефона" required>
+      <label class="visually-hidden" for="customerPhone">Ваш телефон</label>
+      <input class="form__input form__input--phone form-control" id="customerPhone" type="tel"
+             name="customerPhone" placeholder="Введите ваш номер телефона" required pattern="\+?[0-9\s\-\(\)]+">
       <small class="form-text text-muted">Введите телефон в соответсвие с шаблоном</small>
     </div>
     <div class="form-check">
       <label class="form__label form__label--agree check form-check-label">
         <input class="form__input form__input--checkbox check__input form-check-input" type="checkbox"
-               name="customer-agree" required>
+               name="customerAgree" required>
         <span class="form__custom-checkbox check__box"></span>
         Я даю согласие на обработку персональных данных
       </label>
     </div>
-    <div class="form-group text-center">
+    <div class="form-group">
       <a class="form__link" href="#">Политика конфиденциальности</a>
     </div>
     <button class="modal__button btn btn-secondary" type="submit">Заказать звонок</button>

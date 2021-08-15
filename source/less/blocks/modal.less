@@ -1,16 +1,35 @@
 .modal {
   padding: 50px;
+  max-width: 600px;
   background-color: @primary;
+}
+
+// Временно
+.fancybox__slide {
+  padding: 0 !important;
 }
 
 .modal__title {
   margin-bottom: 30px;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   color: @secondary;
   text-align: center;
   text-transform: uppercase;
 }
 
 .modal__button {
+  margin-top: 10px;
+  min-height: 38px;
+  &--loading {
+    background-image: url("../../img/loader.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent !important;
+  }
+}
 
+// Чтобы swal мог перекрывать, установим z-index > 1030 x < 10000
+.fancybox-container.fancybox-is-open {
+  z-index: 1040;
 }

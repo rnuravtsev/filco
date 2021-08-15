@@ -11,16 +11,25 @@
 @media (min-width: @desktop) {
   .section {
     position: relative;
-    &--pattern-center::before {
+    &-pattern::before {
       content: "";
       position: absolute;
-      top: 30px;
-      left: 30%;
+      top: 35px;
       display: block;
       width: 40%;
-      height: 95%;
+      height: 90%;
       background-color: @primary-light;
       opacity: @opacity-default;
+    }
+    &-pattern--left::before {
+      left: -15px;
+    }
+    &-pattern--center::before {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    &-pattern--right::before {
+      right: -15px;
     }
   }
 }

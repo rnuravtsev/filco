@@ -1,11 +1,12 @@
 .map {
   position: relative;
+  display: block;
   border-radius: 10px;
-  background-image: url("../../img/bg-map.webp");
-  background-repeat: no-repeat;
-  background-position: right;
-  height: 450px;
-  //background-size: cover;
+  transition: transform .25s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+  //background-image: url("../../img/bg-map.jpg");
 }
 
 .map__iframe {

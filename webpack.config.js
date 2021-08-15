@@ -4,19 +4,31 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
-module.exports = {
+let conf = {
+  mode: "development",
   entry: [
     './source/js/index.js',
   ],
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'build'),
+    // filename: '[name].[contenthash].js',
+    // path: path.resolve(__dirname, 'build'),
+
+    // Временно, для запуска Mamp
+    filename: '[name].js',
+    // for Mamp
+    path: path.resolve(__dirname, '/Applications/MAMP/htdocs/filco/'),
+    // for Mamp PRO
+    // path: path.resolve(__dirname, '/Users/albertmuravcev/Sites/localhost/'),
   },
+  target: 'web',
   devServer: {
-    contentBase: path.join(__dirname, 'build'),
+    // contentBase: path.join(__dirname, 'build'),
+    // for Mamp
+    contentBase: path.join(__dirname, '/Applications/MAMP/htdocs/filco/'),
     compress: true,
     port: 1337,
-    open: false,
+    open: true,
+    hot: true,
   },
   devtool: "source-map",
   module: {
@@ -57,11 +69,7 @@ module.exports = {
       // Images
       {
         test: /\.(webp|png|jpg|gif)$/i,
-        // loader: 'url-loader',
         type: 'asset/resource',
-        generator: {
-          filename: 'img/[name][ext]'
-        }
       },
       // Fonts
       {
@@ -83,6 +91,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './source/index.html',
+      title: 'Caching'
     }),
     new CopyPlugin({
       patterns: [
@@ -102,3 +111,10 @@ module.exports = {
     })
   ]
 };
+
+module.exports = (env, options) => {
+  let mode = options.mode === 'production';
+  conf.devtool = mode ? false : 'eval-cheap-module-source-map';
+
+  return conf
+}
